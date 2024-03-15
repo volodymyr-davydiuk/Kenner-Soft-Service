@@ -1,0 +1,39 @@
+@import "../components/responsiveSlider";
+@import "../basic/breakpoints";
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .col {
+    flex-basis: 48%;
+  }
+}
+
+@media (max-width: $bpTablet) {
+  .top-section {
+    .left-col {
+      flex-basis: 40%;
+      max-width: 380px;
+    }
+    .right-col {
+      flex-basis: 59%;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .top-section {
+    flex-flow: column-reverse wrap;
+    .left-col {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+    .right-col {
+      flex-basis: 100%;
+    }
+  }
+}

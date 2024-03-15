@@ -1,0 +1,89 @@
+.slider-block {
+  .carousel .control-arrow,
+  .carousel.carousel-slider .control-arrow {
+    transition: all .25s ease-in;
+    opacity: .4;
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    background: none;
+    border: 0;
+    font-size: 32px;
+    cursor: pointer;
+    height: 99%;
+  }
+
+  .carousel .control-arrow:focus,
+  .carousel .control-arrow:hover {
+    opacity: 1;
+  }
+
+  .carousel.carousel-slider .control-arrow:hover {
+    background: none;
+  }
+
+  .carousel .control-arrow:before,
+  .carousel.carousel-slider .control-arrow:before {
+    margin: 0 5px;
+    display: inline-flex;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    content: '';
+  }
+
+  .carousel .control-disabled.control-arrow {
+    opacity: 0;
+    cursor: inherit;
+    display: none
+  }
+
+  .carousel .control-prev.control-arrow {
+    left: 0;
+  }
+
+  .carousel .control-prev.control-arrow:before {
+    border-right-color: #000000;
+  }
+
+  .carousel .control-next.control-arrow {
+    right: 0;
+  }
+
+  .carousel .control-next.control-arrow:before {
+    border-left-color: #000000;
+  }
+
+  .carousel .carousel {
+    position: relative
+  }
+
+  .carousel .control-arrow {
+    outline: 0;
+    border: 0;
+    background: none;
+    top: 50%;
+    margin-top: -13px;
+    font-size: 18px;
+  }
+
+  .carousel.carousel-slider .control-arrow {
+    top: 0;
+    color: #000000;
+    font-size: 26px;
+    bottom: 0;
+    margin-top: 0;
+    padding: 5px
+  }
+  .carousel {
+    position: relative;
+    width: 100%
+  }
+
+  .carousel * {
+    box-sizing: border-box
+  }
+  .carousel a, .carousel img {
+    width: 100%;
+    display: inline-flex;
+  }
+}

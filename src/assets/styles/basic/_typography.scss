@@ -4,18 +4,18 @@
 
 h1, h2, .h2, h3, .h3, h4, h5, .h5, h6 {
   color: $primaryTextColor;
-  font-weight: $fontBoldWeight;
+  font-weight: $fontMediumWeight;
   margin: 22px 0;
-  font-size: 30px;
+  font-size: 20px;
   em, i, strong, b {
     font-weight: inherit;
   }
 }
 h1, .h1 {
   color: $primaryTextColor;
-  font-size: 36px;
+  font-size: 20px;
   margin: 36px 0 50px;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 h2, .h2 {
