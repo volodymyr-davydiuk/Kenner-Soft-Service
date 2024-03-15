@@ -1,0 +1,56 @@
+@import "../basic/colors";
+@import "../basic/breakpoints";
+
+//reusable chunks
+%wrapper {
+  width: 1254px;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+%flex-horizontal {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+//common classes
+.wrapper {
+  @extend %wrapper;
+}
+
+.inline-flex-link {
+  display: inline-flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.a-center {
+  text-align: center;
+}
+
+.a-left {
+  text-align: left;
+}
+
+.a-right {
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media (max-width: $bpMobile) {
+  .mobile-only {
+    display: block;
+  }
+  .desktop-menu {
+    display: none;
+  }
+}
