@@ -1,15 +1,169 @@
 @import "../components/responsiveSlider";
 @import "../basic/breakpoints";
+@import "../basic/colors";
 
 .top-section {
   display: flex;
   justify-content: space-between;
+  margin-top: 60px;
   img {
     width: 100%;
     max-width: 100%;
   }
   .col {
     flex-basis: 48%;
+  }
+  .right-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .title {
+    border-bottom: 1px solid $borderColor;
+    padding-bottom: 10px;
+  }
+  .description-list {
+    color: $primaryTextColor;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.21px;
+  }
+  .info-buttons-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid $borderColor;
+    border-radius: 10px;
+    margin: 30px 0;
+    .info-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 33.333333%;
+      padding: 10px 15px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $primaryButtonColor;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      svg {
+        margin-right: 10px;
+      }
+      &:first-child {
+        border-radius: 10px 0 0 10px;
+        &::before {
+          content: '';
+          width: 1px;
+          height: 70%;
+          background: $borderColor;
+          position: absolute;
+          display: block;
+          right: 0  ;
+        }
+      }
+      &:last-child {
+        border-radius: 0 10px 10px 0;
+        &::after {
+          content: '';
+          width: 1px;
+          height: 70%;
+          background: $borderColor;
+          position: absolute;
+          display: block;
+          left: 0  ;
+        }
+      }
+      &:hover {
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: none;
+        }
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+        color: $white;
+        background: $violet;
+      }
+    }
+  }
+  .buy-block {
+    border: 1px solid $borderColor;
+    border-radius: 10px;
+    padding: 15px 20px;
+    .price-block{
+      margin-top: 10px;
+      .price-wrap {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+      .discount {
+        color: $discountColor;
+        font-size: 20px;
+        line-height: 26.9px;
+        text-decoration: line-through;
+        margin-right: 10px;
+      }
+      .price {
+        color: $primaryTextColor;
+        font-size: 30px;
+        line-height: 40.36px;
+      }
+    }
+    .short-description {
+      text-align: right;
+      font-size: 12px;
+      line-height: 16.14px;
+      color: $lightGrey;
+      margin-top: 5px;
+    }
+    .buy-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      input {
+        width: 80px;
+        padding: 10px;
+        color: #4D4D4D;
+        background: $inputBg;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+      }
+      .button {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 7px 15px;
+      }
+      .violet-button {
+        color: $white;
+        background: $violet;
+        flex-basis: 40%;
+        margin: 0 10px;
+        &:hover {
+          background: lighten($violet, 12%);
+        }
+      }
+      .green-button {
+        color: $white;
+        background: $green;
+        flex-basis: 40%;
+        &:hover {
+          background: lighten($green, 12%);
+        }
+      }
+    }
   }
 }
 
@@ -22,10 +176,26 @@
     .right-col {
       flex-basis: 59%;
     }
+    .description-list {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .buy-block {
+      .buy-buttons {
+        input {
+          width: 70px;
+        }
+        .button {
+          font-size: 16px;
+          padding: 8px 10px;
+          flex-basis: 43%;
+        }
+      }
+    }
   }
 }
 
-@media (max-width: 690px) {
+@media (max-width: 800px) {
   .top-section {
     flex-flow: column-reverse wrap;
     .left-col {
@@ -34,6 +204,25 @@
     }
     .right-col {
       flex-basis: 100%;
+    }
+  }
+}
+
+@media (max-width: $bpSmallerMobile) {
+  .top-section {
+    .buy-block {
+      .buy-buttons {
+        flex-direction: column;
+        input {
+          width: 100%;
+          flex-basis: 100%;
+        }
+        .button {
+          font-size: 16px;
+          flex-basis: 100%;
+          margin: 10px 0 0 0;
+        }
+      }
     }
   }
 }

@@ -38,5 +38,14 @@ const gallery = [
 	},
 ];
 
-export { title, descriptionList, gallery };
+const priceData = [
+	{
+		price: '1.199,00',
+		discount: '1.349,00',
+		currency: '€',
+		shortDescription: 'inkl. 19% MwSt. zzgl. Versandkosten'
+	}
+];
+
+export { title, descriptionList, gallery, priceData };
 

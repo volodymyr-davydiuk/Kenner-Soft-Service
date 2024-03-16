@@ -16,6 +16,7 @@ body {
   margin: 0;
   font-family: $fontFamilyDefault;
   background: $bgColor;
+  font-weight: $fontNormalWeight;
   color: $primaryTextColor;
   scroll-behavior: smooth;
   font-size: 16px;
@@ -23,6 +24,7 @@ body {
 
 ol, ul {
   list-style-position: inside;
+  padding-left: 10px;
 }
 
 ::-webkit-scrollbar {
@@ -68,6 +70,15 @@ a {
     color: $linkHoverColor;
     text-decoration: underline;
   }
+}
+
+button {
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+path {
+  transition: all 0.2s;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {

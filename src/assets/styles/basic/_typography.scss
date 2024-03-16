@@ -14,7 +14,7 @@ h1, h2, .h2, h3, .h3, h4, h5, .h5, h6 {
 h1, .h1 {
   color: $primaryTextColor;
   font-size: 20px;
-  margin: 36px 0 50px;
+  margin: 36px 0 10px;
   font-weight: 500;
 }
 
@@ -34,18 +34,18 @@ h4, h5, .h5, h6 {
 @media (max-width: $bpSmallDesktop) {
   h1, .h1 {
     margin: 20px 0 25px;
-    font-size: 32px;
+    font-size: 20px;
   }
   h2, .h2 {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 
 @media (max-width: $bpTablet) {
   h1, .h1 {
-    font-size: 24px;
+    font-size: 18px;
   }
   h2, .h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
