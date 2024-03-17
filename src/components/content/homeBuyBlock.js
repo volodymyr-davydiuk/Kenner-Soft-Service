@@ -2,6 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const HomeBuyBlock = ({ priceData }) => {
+	const addToBasket = () => {
+		//There will be logic
+		console.log( "Added to basket" );
+	}
+
+	const settings = () => {
+		//There will be logic
+		console.log( "Settings" );
+	}
+
 	return (
 		<div className="buy-block">
 			{ priceData && (
@@ -31,10 +41,10 @@ const HomeBuyBlock = ({ priceData }) => {
 				<div>
 					<input type="number" defaultValue={ 1 }/>
 				</div>
-				<button className={ "button violet-button" }>
+				<button className={ "button violet-button" } onClick={() => addToBasket()}>
 					In den Warenkorb
 				</button>
-				<button className={ "button green-button" }>
+				<button className={ "button green-button" } onClick={() => settings()}>
 					Konfigurieren
 				</button>
 			</div>
