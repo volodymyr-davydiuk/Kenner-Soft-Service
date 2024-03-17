@@ -12,8 +12,6 @@ const HomeTabs = () => {
 				const response = await fetch('https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json');
 				const result = await response.json();
 				const sortResult = result.filter((item, index) => (index <= (Math.floor(Math.random() * result.length))))
-				console.log( "sort: "+sortResult[0].id );
-				console.log( "active: "+activeButton );
 				setTabsData(sortResult.slice(-5));
 				setActiveButton(sortResult.slice(-5)[0].id)
 				setLoading(false);

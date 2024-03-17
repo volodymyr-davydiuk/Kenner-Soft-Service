@@ -3,9 +3,10 @@ import GetWindowWidth from '../shared/helpers/GetWindowWidth';
 import { Carousel } from 'react-responsive-carousel';
 import "../../assets/images/SliderImage1.jpg"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import PropTypes from 'prop-types';
 
-const HomeSlider = ({ sliderImage }) => {
-	if(!sliderImage?.length) return false;
+const HomeSlider = ({ sliderImages }) => {
+	if(!sliderImages?.length) return false;
 	const windowWidth = GetWindowWidth();
 	const isMobile = windowWidth <= 600;
 
@@ -23,7 +24,7 @@ const HomeSlider = ({ sliderImage }) => {
 					// dynamicHeight={true}
 					interval={4000}
 				>
-					{sliderImage.map((sliderItem, index) => {
+					{sliderImages.map((sliderItem, index) => {
 						return (
 							<div key={ `slide-item-${ index }` } className={"img-wrap"}>
 								<img src={ sliderItem?.img }
@@ -45,7 +46,7 @@ const HomeSlider = ({ sliderImage }) => {
 					swipeable={true}
 					interval={4000}
 				>
-					{sliderImage.map((sliderItem, index) => {
+					{sliderImages.map((sliderItem, index) => {
 						return (
 							<div key={ `slide-mobile-item-${ index }` }>
 								<img src={ sliderItem?.img }
@@ -58,6 +59,13 @@ const HomeSlider = ({ sliderImage }) => {
 			}
 		</div>
 	);
+};
+
+HomeSlider.propTypes = {
+	sliderImages: PropTypes.arrayOf(PropTypes.shape({
+		img: PropTypes.string,
+		alt: PropTypes.string
+	}))
 };
 
 export default HomeSlider;
