@@ -4,6 +4,7 @@ import '../../assets/styles/pages/home.scss';
 import HomeSlider from '../content/homeSlider';
 import PropTypes from 'prop-types';
 import IcomoonIcon from '../shared/icomoonIcon';
+import HomeTabs from '../content/homeTabs';
 
 const Home = ({ title, descriptionList, gallery, priceData }) => {
 	return (
@@ -80,6 +81,7 @@ const Home = ({ title, descriptionList, gallery, priceData }) => {
 						</div>
 					</div>
 				</div>
+				<HomeTabs/>
 			</div>
 		</Layout>
 	);

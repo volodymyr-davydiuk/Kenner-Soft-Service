@@ -167,6 +167,16 @@
   }
 }
 
+.tab-block {
+  .tab-buttons-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 42px;
+  }
+}
+
 @media (max-width: $bpTablet) {
   .top-section {
     .left-col {
